@@ -111,7 +111,7 @@ class Tool:
             
     def net(self, ck):
         model = Net()
-        model.load_state_dict(torch.load("./image_restoration_tools/models/" + ck,
+        model.load_state_dict(torch.load("image_restoration_tools/models/" + ck,
                                          map_location=torch.device(device)), strict=True)
         model.eval()
         for k, v in model.named_parameters():
