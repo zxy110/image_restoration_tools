@@ -3,7 +3,7 @@ import os
 import cv2
 import math
 import random
-import utils
+import image_restoration_tools.utils as utils
 import torch
 import numpy as np
 from numpy import uint8
@@ -17,7 +17,7 @@ from scipy.stats import gamma
 from scipy.ndimage import correlate
 from skimage.util import view_as_windows
 
-from network import Net
+from image_restoration_tools.network import Net
 
 import warnings
 warnings.filterwarnings('ignore')
@@ -62,7 +62,7 @@ class Agent:
             img_E = self.step(img, tool) 
             next_obs = self.calscore(img_E)
 
-            print("step:{} obs:[{},{}]->[{},{}] take tool:{} {} {}".format(steps, obs[0], obs[1], next_obs[0], next_obs[1], tool, tool0, tool1))
+            # print("step:{} obs:[{},{}]->[{},{}] take tool:{} {} {}".format(steps, obs[0], obs[1], next_obs[0], next_obs[1], tool, tool0, tool1))
 
             if tool==0 and (obs[tool]-next_obs[tool]<0.3): 
                 tool0 = False
@@ -111,7 +111,7 @@ class Tool:
             
     def net(self, ck):
         model = Net()
-        model.load_state_dict(torch.load("./models/" + ck,
+        model.load_state_dict(torch.load("./image_restoration_tools/models/" + ck,
                                          map_location=torch.device(device)), strict=True)
         model.eval()
         for k, v in model.named_parameters():
