@@ -1,4 +1,4 @@
-# A package of image restoration by leo
+# A simple package of image restoration
 
 There are three methods in our package, which are 
 
@@ -21,7 +21,7 @@ irt.restore_image(img, savepath, path_length=3, isJPEG=False, isBLUR=False)
 You can set enhancement path by set $path_length$, the smaller the value, the shorter the recovery time will be.
 if the degrading process is known as JPEG/Gaussian BLUR, set $isJPEG/isBLUR$ true separately
 
-You can install our package by pip:
+You can either install our package by pip:
 ```
 pip install image_restoration_tools
 ```
