@@ -4,7 +4,7 @@ There are three methods in our package, which are
 
 ```
 # import the package
-import image_restoration_tools
+import image_restoration_tools.restoration_tool as irt
 irt = image_restoration_tools.Agent()
 
 ## 1. input the images dir and the dir path where enhanced images save
