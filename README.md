@@ -1,7 +1,10 @@
 # A simple package of image restoration
 
-There are three methods in our package, which are 
+The proposed toolset can handle four kinds of degradings for arbitrary levels, which are additive gaussian noise, jpeg compression artifacts, motion blur and gausssian blur.
 
+We have upload the toolset to pip library, you can refer to [here](https://pypi.org/project/image-restoration-tools/) for latest version.
+
+### Usage
 ```
 # import the package
 import image_restoration_tools.restoration_tool as irt
@@ -20,8 +23,3 @@ irt.restore_image(img, savepath, path_length=3, isJPEG=False, isBLUR=False)
 ```
 You can set enhancement path by set $path_length$, the smaller the value, the shorter the recovery time will be.
 if the degrading process is known as JPEG/Gaussian BLUR, set $isJPEG/isBLUR$ true separately
-
-You can either install our package by pip:
-```
-pip install image_restoration_tools
-```
