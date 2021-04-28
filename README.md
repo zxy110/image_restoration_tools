@@ -2,7 +2,7 @@
 
 The proposed toolset can handle four kinds of degradings for arbitrary levels, which are additive gaussian noise, jpeg compression artifacts, motion blur and gausssian blur.
 
-We have upload the toolset to pip library, you can refer to [here](https://pypi.org/project/image-restoration-tools/) for latest version.
+We have upload the toolset to pip library, you can refer to [here](https://pypi.org/project/image-restoration-tools/) for the latest version.
 
 ### Usage
 ```
