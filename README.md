@@ -21,5 +21,5 @@ import image_restoration_tools.utils
 img = utils.imread_uint(imgpath, 3)
 irt.restore_image(img, savepath, path_length=3, isJPEG=False, isBLUR=False)
 ```
-You can set enhancement path by set $path_length$, the smaller the value, the shorter the recovery time will be.
-if the degrading process is known as JPEG/Gaussian BLUR, set $isJPEG/isBLUR$ true separately
+You can set enhancement path by set path_length, the smaller the value, the shorter the recovery time will be.
+if the degrading process is known as JPEG/Gaussian BLUR, set isJPEG/isBLUR true separately
